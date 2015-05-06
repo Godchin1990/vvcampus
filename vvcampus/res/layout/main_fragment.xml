@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.example.vvcampus.view.NoScollViewPager
+        android:id="@+id/vp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <!-- 底部的tab菜单 -->
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        >
+   
+    <RadioGroup 
+        android:id="@+id/rg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal"
+        >
+       
+        <RadioButton 
+            android:id="@+id/rb_message"
+            android:text="消息"
+            android:drawableTop="@drawable/home_selector"
+            style="@style/main_fragment_tab_tv_style"
+            android:checked="true"
+            />
+
+        <RadioButton 
+            android:id="@+id/rb_contacts"
+            android:drawableTop="@drawable/newscenter_selector"
+            android:text="联系人"
+            style="@style/main_fragment_tab_tv_style"/>
+        <RadioButton 
+            android:id="@+id/rb_dynamic"
+            android:text="动态"
+            android:drawableTop="@drawable/smartservice_selector"
+            style="@style/main_fragment_tab_tv_style"/>
+         </RadioGroup>
+         
+     <!-- <TextView
+            style="@style/tab_msgnum_style"
+            android:layout_marginLeft="55dp"
+            android:text="12" /> -->
+              <TextView
+                  android:id="@+id/tv_hasnewdynamic"
+            style="@style/tab_msgnum_style"
+            android:layout_marginLeft="270dp"
+            /> 
+              <TextView
+                  android:id="@+id/tv_msgcount"
+            style="@style/tab_msgnum_style"
+             android:background="@android:color/transparent"
+            android:layout_marginLeft="60dp"
+            /> 
+            
+               
+    <com.example.vvcampus.view.BezierView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="60dp"
+        android:background="@android:color/transparent" />
+    </RelativeLayout>
+       
+</LinearLayout>
